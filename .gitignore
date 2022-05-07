@@ -1,3 +1,12 @@
+# project-specific folders
+ade20k/
+celeba-hq-dataset/
+experiments/
+tb_logs/
+configs/training/location/celeba.yaml
+data256x256.zip
+hub/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -10,6 +19,7 @@ __pycache__/
 .Python
 build/
 develop-eggs/
+env/
 dist/
 downloads/
 eggs/

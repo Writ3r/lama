@@ -105,8 +105,9 @@ def print_traceback_handler(sig, frame):
 
 
 def register_debug_signal_handlers(sig=signal.SIGUSR1, handler=print_traceback_handler):
-    LOGGER.warning(f'Setting signal {sig} handler {handler}')
-    signal.signal(sig, handler)
+    if sig != 1:
+        LOGGER.warning(f'Setting signal {sig} handler {handler}')
+        signal.signal(sig, handler)
 
 
 def handle_deterministic_config(config):
